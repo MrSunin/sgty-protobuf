@@ -1,0 +1,43 @@
+syntax="proto3";
+package proto;
+
+/**************** 游戏广播 ****************/
+message Broadcast{
+  int32 start_at = 1;     // 开始时间
+  int32 end_at = 2;       // 结束时间
+  int32 interval = 3;     // 循环间隔
+  int32 interval_unit = 4;// 间隔单位1:分钟 2:小时 3:天
+  string cont = 5;        // 广播内容
+}
+
+/**************** 游戏公告 ****************/
+message Notice{
+  int32 start_at = 1;     // 开始时间
+  int32 end_at = 2;       // 结束时间
+  string title = 3;       // 公告标题
+  string cont = 4;        // 公告内容
+}
+
+/**************** 邮件 ****************/
+message Mail{
+  int32 recipient = 1;    // 收件人 1:全部 2:在线 3:指定
+  string uid_list = 2;    // 收件玩家列表
+  string title = 3;       // 邮件标题
+  string cont = 4;        // 邮件内容
+  string prop_list = 5;   // 附件
+  string expire_at = 6;   // 过期时间
+}
+
+/**************** 禁言 ****************/
+message Muted{
+  string uid = 1;         // 用户id
+  int32  start_at = 2;    // 禁言开始时间
+  int32  end_at = 3;      // 禁言结束时间
+}
+
+/**************** 封号 ****************/
+message Ban{
+  string uid = 1;         // 用户id
+  int32  start_at = 2;    // 封号开始时间
+  int32  end_at = 3;      // 封号结束时间
+}
