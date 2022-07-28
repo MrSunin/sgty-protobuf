@@ -11,6 +11,9 @@ proto文件放在 protobuf/proto 下
 
 ## 电脑安装protoc编译器
 [官方github](https://github.com/protocolbuffers/protobuf/releases)  
+>protobuf下已经下载好了mac、win64、win32三个版本的编译器
+>电脑可以不安装protoc编译器，protoc.py脚本会直接引用已经下载好的编译器
+
 window下下载win32或者win64版本，mac下载osx版本，解压后得到可运行的脚本protoc
 ### Mac下安装：  
 >把解压好的文件复制到 /usr/local 下对应的文件夹中
